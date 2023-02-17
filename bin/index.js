@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { createHash } from 'crypto';
 import { readFile, writeFile } from 'fs';
 import parseArgs from 'minimist';
@@ -11,14 +12,18 @@ readFile(`./${argv['_'][0]}`, 'utf-8', (err, data) => {
     }
     data = data.split('\n');
     data.forEach((link) => {
-        let fileName = link.split(':')[2];
+        let url = new URL(link);
+        let fileName = link.split('File:')[1];
         fileName = fileName.trim();
         let hash = createHash('md5').update(fileName).digest('hex');
         let p1 = hash[0];
         let p2 = hash[0] + hash[1];
-        let resolvedLink = `${link.split('/wiki/File:')[0]}/images/${p1}/${p2}/${fileName}`;
+        let resolvedLink = `https://${url.hostname}${argv['_'][1]}${p1}/${p2}/${fileName}`;
         output += resolvedLink + '\n';
     });
+
+    
+    
     writeFile('./output.txt', output, function(err) {
         if(err){
             return console.error(err);
