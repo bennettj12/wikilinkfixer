@@ -1,0 +1,20 @@
+{
+  "name": "wikilinkfixer",
+  "version": "1.0.1",
+  "description": "Takes a list of mediawiki images and generates a list of actual downloadable links. `mwfix {filepath}`",
+  "main": "./bin/index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "bin": {
+    "mwfix": "./bin/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "minimist": "^1.2.8"
+  }
+}
