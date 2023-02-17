@@ -10,5 +10,8 @@ If this link is in a list called `list.txt`, and it is in our current directory,
 ```console
 mwfix "list.txt" "/upload/shared/"
 ```
+Output from mwfix: 
+https://wikitravel.org/upload/shared/b/bf/Belum_Temenggor_Forest_Reserve_Banner.jpg
+
 * list.txt is our source file
 * "/upload/shared/" is the file structure after the TLD and up to the hash that wikitravel uses.
