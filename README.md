@@ -15,3 +15,5 @@ https://wikitravel.org/upload/shared/b/bf/Belum_Temenggor_Forest_Reserve_Banner.
 
 * list.txt is our source file
 * "/upload/shared/" is the file structure after the TLD and up to the hash that wikitravel uses.
+
+Some wikis have images hosted on a different domain or with a subdomain, this tool won't work for those, but you can start with this and then you bulk find/replace to finish the list.
