@@ -1,5 +1,5 @@
 # wikilinkfixer
-Converts list of wiki media URLs with the 'File:' url structure to a list of the actual source file URLs
+Converts list of wiki media URLs with the 'File:' url structure to a list of the actual source file URLs with the /#/##/ hash structure.
 ```console
 mwfix {listPath} {urlStructure}
 ```
